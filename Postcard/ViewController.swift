@@ -9,6 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var enterNameTextFIeld: UITextField!
+    @IBOutlet weak var enterMessageTextField: UITextField!
+    @IBOutlet weak var mailButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func sendMailButtonPressed(sender: UIButton) {
+        if(enterNameTextFIeld.text.isEmpty && enterMessageTextField.text.isEmpty){
+            return
+        }
+        messageLabel.hidden = false
+        messageLabel.text = enterNameTextFIeld.text + ":\n" + enterMessageTextField.text
+        messageLabel.textColor = UIColor.redColor()
+        mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
+        
+        
+        enterMessageTextField.text = ""
+        enterMessageTextField.resignFirstResponder()
+    }
+    
 }
 
