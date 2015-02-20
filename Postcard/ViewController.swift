@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
+        //this is a comment to test git commit
         if(enterNameTextFIeld.text.isEmpty && enterMessageTextField.text.isEmpty){
             return
         }
