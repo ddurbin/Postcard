@@ -44,7 +44,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="30" y="78" width="354" height="89"/>
+                                    <rect key="frame" x="30" y="106" width="354" height="61"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9R-G6-A20">
@@ -61,6 +61,15 @@
                                     <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zEk-oj-XtL"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-R6-Ebj">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="77" width="303" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -70,6 +79,7 @@
                                 <exclude reference="zXi-hG-TIx"/>
                                 <exclude reference="Ura-7B-oGg"/>
                                 <exclude reference="M9R-G6-A20"/>
+                                <exclude reference="tfV-R6-Ebj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -79,14 +89,16 @@
                                 <include reference="zXi-hG-TIx"/>
                                 <include reference="Ura-7B-oGg"/>
                                 <include reference="M9R-G6-A20"/>
+                                <include reference="tfV-R6-Ebj"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="enterMessageTextField" destination="zXi-hG-TIx" id="Xw5-xg-hWv"/>
-                        <outlet property="enterNameTextFIeld" destination="JQZ-1V-gy1" id="3fx-3c-m3O"/>
+                        <outlet property="enterNameTextField" destination="JQZ-1V-gy1" id="yxW-Jk-LST"/>
                         <outlet property="mailButton" destination="M9R-G6-A20" id="zzD-Zh-zLS"/>
                         <outlet property="messageLabel" destination="Ura-7B-oGg" id="als-dk-aHK"/>
+                        <outlet property="nameLabel" destination="tfV-R6-Ebj" id="zWa-XI-lyD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

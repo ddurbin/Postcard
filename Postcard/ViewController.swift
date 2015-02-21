@@ -12,9 +12,10 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var enterNameTextFIeld: UITextField!
+    @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var mailButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +29,21 @@ class ViewController: UIViewController {
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
         //this is a comment to test git commit
-        if(enterNameTextFIeld.text.isEmpty && enterMessageTextField.text.isEmpty){
+        if(enterNameTextField.text.isEmpty && enterMessageTextField.text.isEmpty){
             return
         }
+        nameLabel.hidden = false
         messageLabel.hidden = false
-        messageLabel.text = enterNameTextFIeld.text + ":\n" + enterMessageTextField.text
+        nameLabel.text = "From: " + enterNameTextField.text
+        messageLabel.text = "Message: " + enterMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
+        nameLabel.textColor = UIColor.blueColor()
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
         
         
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
+        enterNameTextField.resignFirstResponder()
     }
     
 }
